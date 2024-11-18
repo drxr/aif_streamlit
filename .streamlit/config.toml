@@ -1,0 +1,9 @@
+[logger]
+
+level = "info"
+messageFormat = "%(asctime)s %(levelname) -7s %(name)s: %(message)s"
+
+[server]
+
+maxMessageSize = 2000
+maxUploadSize = 2000
