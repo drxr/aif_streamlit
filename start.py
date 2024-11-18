@@ -38,7 +38,7 @@ st.sidebar.subheader("Выберите опцию:")
 
 db_con = SQLConnector(db_name, db_user, db_host, db_port, db_password)
 
-actions = db_con.read_sql_query('SELECT * FROM users LIMIT 100000')
+actions = db_con.read_sql_query('SELECT * FROM users LIMIT 1000000')
 action_columns = ['action_system_template_name', 'action_datetime', 'channel_name', 
                   'channel_campaign', 'channel_utm_source', 'utm_medium', 'utm_content', 
                   'utm_term', 'user_id', 'mailing_action', 'mailing_name']
