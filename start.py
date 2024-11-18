@@ -38,11 +38,11 @@ st.sidebar.subheader("Выберите опцию:")
 
 db_con = SQLConnector(db_name, db_user, db_host, db_port, db_password)
 
-actions = db_con.read_sql_query('SELECT * FROM users')
-action_columns = ['action_system_template_name', 'action_datetime', 'channel_name', 
-                  'channel_campaign', 'channel_utm_source', 'utm_medium', 'utm_content', 
-                  'utm_term', 'user_id', 'mailing_action', 'mailing_name']
-actions_clean = actions[action_columns]
+# actions = db_con.read_sql_query('SELECT * FROM users')
+# action_columns = ['action_system_template_name', 'action_datetime', 'channel_name', 
+#                   'channel_campaign', 'channel_utm_source', 'utm_medium', 'utm_content', 
+#                   'utm_term', 'user_id', 'mailing_action', 'mailing_name']
+# actions_clean = actions[action_columns]
 
 payments = db_con.read_sql_query('SELECT * FROM payments')
 payments.columns = ['mindbox_id', 'first_action_id', 'order_date', 'channel_id',
