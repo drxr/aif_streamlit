@@ -52,7 +52,7 @@ class SQLConnector:
         return pd.read_sql(query, con=_self.connection)
 
 
-    def upload_data(self, data: pd.DataFrame, table: str, engine: psycopg2.connect) -> None:
+    def upload_data(self, data: pd.DataFrame, table: str, engine: self.connection) -> None:
 
         '''
         Метод для выгрузки полученных датафреймов в базу данных SQL
