@@ -1,5 +1,5 @@
 import pandas as pd
-import psycopg2
+from import sqlalchemy import create_engine
 import streamlit as st
 
 
@@ -28,7 +28,7 @@ class SQLConnector:
         self.host = db_host
         self.port = db_port
         self.password = db_password
-        self.connection = psycopg2.connect(f"dbname={self.name} user={self.user} host={self.host} port={self.port} password={self.password}")
+        self.connection = create_engine(f'postgresql://{self.user}:{self.password}@{self.host}:{self.port}/{self.name}')
     
     @st.cache_data()
     def read_sql_query(_self, query: str) -> pd.DataFrame:
