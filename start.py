@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from analysis import PaymentsFileAnalysis
 from sqlalchemy import create_engine
 import streamlit as st
+import psycopg2
 
 
 class SQLConnector:
