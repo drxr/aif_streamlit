@@ -6,7 +6,7 @@ import seaborn as sns
 import os
 from dotenv import load_dotenv
 from analysis import PaymentsFileAnalysis
-from import sqlalchemy import create_engine
+from sqlalchemy import create_engine
 import streamlit as st
 
 
